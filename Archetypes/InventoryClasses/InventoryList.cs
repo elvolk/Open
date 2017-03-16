@@ -26,7 +26,6 @@ namespace Open.Archetypes.InventoryClasses
             var capacity = ProductList.Capacity;
             for (var i = 0; i < 10000; i++)
             {
-                //ProductList.Add(i);
                 if (ProductList.Capacity > capacity)
                 {
                     capacity = ProductList.Capacity;

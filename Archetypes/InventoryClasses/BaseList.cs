@@ -13,12 +13,12 @@ namespace Open.Archetypes.InventoryClasses
         {
             get
             {
-                throw new NotImplementedException();
+                return list[index];
             }
 
             set
             {
-                throw new NotImplementedException();
+                list[index] = value;
             }
         }
 
@@ -26,17 +26,12 @@ namespace Open.Archetypes.InventoryClasses
         {
             get
             {
-                return list.Count;
+                List<T> t = new List<T>();
+                return t.Count;
             }
         }
 
-        public bool IsReadOnly
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public bool IsReadOnly { get; }
 
         public void Add(T item)
         {
@@ -50,12 +45,17 @@ namespace Open.Archetypes.InventoryClasses
 
         public bool Contains(T item)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < Count; i++)
+            {
+                var contains = list.Contains(item);
+                return contains;
+            }
+            return true;
         }
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            list.CopyTo(array, arrayIndex);
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -65,7 +65,8 @@ namespace Open.Archetypes.InventoryClasses
 
         public int IndexOf(T item)
         {
-            throw new NotImplementedException();
+            var index = list.IndexOf(item);
+            return index;
         }
 
         public void Insert(int index, T item)
@@ -81,7 +82,7 @@ namespace Open.Archetypes.InventoryClasses
 
         public void RemoveAt(int index)
         {
-            throw new NotImplementedException();
+            list.RemoveAt(1);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
