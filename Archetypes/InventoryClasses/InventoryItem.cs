@@ -46,7 +46,6 @@ namespace Open.Archetypes.InventoryClasses
             get { return SetDefault(ref description); }
             set { SetValue(ref description, value); }
         }
-        // Siim
         public double InventoryStatus {
             get { return SetDefault(ref inventoryStatus); }
             set { SetValue(ref inventoryStatus, value); }

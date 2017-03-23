@@ -112,6 +112,7 @@
     <None Include="Attribute.cd" />
     <None Include="BaseEntity.cd" />
     <None Include="Entity.cd" />
+    <None Include="InventoryClasses\Inventory.cd" />
     <None Include="Open.cd" />
     <None Include="Period.cd" />
     <None Include="ProductClasses\ServiceStates.cd" />

@@ -10,6 +10,7 @@ namespace Open.Archetypes.InventoryClasses
         private bool canAcceptRequest;
         private int numberAvailable;
         private int numberReserved;
+        private ProductType productType;
         public int NumberAvailable
         {
             get { return SetDefault(ref numberAvailable); }
@@ -27,6 +28,11 @@ namespace Open.Archetypes.InventoryClasses
             set { SetValue(ref canAcceptRequest, value); }
         }
 
+        public ProductType ProductType
+        {
+            get { return SetDefault(ref productType); }
+            set { SetValue(ref productType, value); }
+        }
         public void Capacity()
         {
             var capacity = inventoryList.Capacity;
@@ -37,6 +43,16 @@ namespace Open.Archetypes.InventoryClasses
                     capacity = inventoryList.Capacity;
                 }
             }
+        }
+
+        public void AddProductInstance()
+        {
+            
+        }
+
+        public void RemoveProductInstance()
+        {
+            
         }
     } 
 }
