@@ -16,12 +16,6 @@ namespace Open.Archetypes.InventoryClasses
             {
                 ProductList.Add(new Product("ItemName", 10, 1265, "TOOTED1", 667, "Hea toode", 1, new DateTime(2017, 03, 03)));
             }
-            
-
-            foreach(var Product in ProductList)
-            {
-                //Näidata seda kuskil
-            }
 
             var capacity = ProductList.Capacity;
             for (var i = 0; i < 10000; i++)

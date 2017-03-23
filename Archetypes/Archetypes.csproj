@@ -66,6 +66,7 @@
     <Compile Include="InventoryClasses\InventoryItem.cs" />
     <Compile Include="InventoryClasses\InventoryList.cs" />
     <Compile Include="InventoryClasses\InventoryStatus.cs" />
+    <Compile Include="InventoryClasses\ProductInventoryEntry.cs" />
     <Compile Include="InventoryClasses\ProductType.cs" />
     <Compile Include="InventoryClasses\ValidPeriod.cs" />
     <Compile Include="MoneyClasses\Money.cs" />
