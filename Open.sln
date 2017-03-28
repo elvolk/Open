@@ -18,8 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Resources\ReSharperOptions.DotSettings = Resources\ReSharperOptions.DotSettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft", "Soft\Soft.csproj", "{CCD1AC01-A1CD-400E-BE10-FBFF0C4B6369}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,10 +44,6 @@ Global
 		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1339F9E9-C749-44DB-A5B1-17041AC0E7B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CCD1AC01-A1CD-400E-BE10-FBFF0C4B6369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCD1AC01-A1CD-400E-BE10-FBFF0C4B6369}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCD1AC01-A1CD-400E-BE10-FBFF0C4B6369}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCD1AC01-A1CD-400E-BE10-FBFF0C4B6369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
