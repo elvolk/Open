@@ -5,7 +5,15 @@ namespace Open.Archetypes.InventoryClasses
 {
     public class ValidPeriod : TemporalEntity
     {
-        public DateTime From { get; set; }
-        public DateTime To { get; set; }
+        private DateTime fromDateTime;
+        private DateTime toDateTime;
+        public DateTime From {
+            get { return SetDefault(ref fromDateTime); }
+            set { SetValue(ref fromDateTime, value); }
+        }
+        public DateTime To {
+            get { return SetDefault(ref toDateTime); }
+            set { SetValue(ref toDateTime, value); }
+        }
     }
 }

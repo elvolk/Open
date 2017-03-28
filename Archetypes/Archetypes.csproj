@@ -66,6 +66,7 @@
     <Compile Include="InventoryClasses\InventoryItem.cs" />
     <Compile Include="InventoryClasses\InventoryList.cs" />
     <Compile Include="InventoryClasses\InventoryStatus.cs" />
+    <Compile Include="InventoryClasses\ProductInventoryEntry.cs" />
     <Compile Include="InventoryClasses\ProductType.cs" />
     <Compile Include="InventoryClasses\ValidPeriod.cs" />
     <Compile Include="MoneyClasses\Money.cs" />
@@ -111,6 +112,7 @@
     <None Include="Attribute.cd" />
     <None Include="BaseEntity.cd" />
     <None Include="Entity.cd" />
+    <None Include="InventoryClasses\Inventory.cd" />
     <None Include="Open.cd" />
     <None Include="Period.cd" />
     <None Include="ProductClasses\ServiceStates.cd" />

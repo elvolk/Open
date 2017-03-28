@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Open.Archetypes.BaseClasses;
 
@@ -26,8 +25,7 @@ namespace Open.Archetypes.InventoryClasses
         {
             get
             {
-                List<T> t = new List<T>();
-                return t.Count;
+                return list.Count;
             }
         }
 
@@ -45,12 +43,7 @@ namespace Open.Archetypes.InventoryClasses
 
         public bool Contains(T item)
         {
-            for (int i = 0; i < Count; i++)
-            {
-                var contains = list.Contains(item);
-                return contains;
-            }
-            return true;
+            return list.Contains(item);
         }
 
         public void CopyTo(T[] array, int arrayIndex)
@@ -60,34 +53,32 @@ namespace Open.Archetypes.InventoryClasses
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return list.GetEnumerator();
         }
 
         public int IndexOf(T item)
         {
-            var index = list.IndexOf(item);
-            return index;
+            return list.IndexOf(item);
         }
 
         public void Insert(int index, T item)
         {
-            throw new NotImplementedException();
+            list.Insert(index, item);
         }
 
         public bool Remove(T item)
         {
-            list.Remove(item);
-            return true;
+            return list.Remove(item);
         }
 
         public void RemoveAt(int index)
         {
-            list.RemoveAt(1);
+            list.RemoveAt(index);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
