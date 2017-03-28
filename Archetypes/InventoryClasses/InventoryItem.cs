@@ -8,7 +8,7 @@ namespace Open.Archetypes.InventoryClasses
         private string itemName;
         private int quantity;
         private int itemId;
-        private string itemCategory;
+        private ItemCategory itemcategory;
         private int inventoryId;
         private string description;
         private double inventoryStatus;
@@ -31,10 +31,10 @@ namespace Open.Archetypes.InventoryClasses
             get { return SetDefault(ref itemId); }
             set { SetValue(ref itemId, value); }
         }
-        public string ItemCategory
+        public ItemCategory itemCategory
         {
-            get { return SetDefault(ref itemCategory); }
-            set { SetValue(ref itemCategory, value); }
+            get { return SetDefault(ref itemcategory); }
+            set { SetValue(ref itemcategory, value); }
         }
 
         public int InventoryId {
@@ -59,6 +59,12 @@ namespace Open.Archetypes.InventoryClasses
             get { return productTypeId; }
             set { SetValue(ref productTypeId, value); }
         }
+
+        public enum ItemCategory
+        {
+            //TODO: sozdat
+        }
+
         public ProductType GetProductType()
         {
             return ProductType.GetProductType(ProductTypeId);

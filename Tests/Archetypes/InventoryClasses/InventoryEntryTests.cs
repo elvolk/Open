@@ -4,7 +4,7 @@ using Open.Archetypes.InventoryClasses;
 
 namespace Open.Tests.Archetypes.InventoryClasses
 {
-    [TestClass] public class InventoryEntryTests : ClassTests<Inventory>
+    [TestClass] public partial class InventoryEntryTests : ClassTests<Inventory>
     {
         private InventoryEntry e;
         [TestMethod] public void ConstructorTest()
@@ -21,6 +21,12 @@ namespace Open.Tests.Archetypes.InventoryClasses
         [TestMethod] public void ConstructorTest1()
         {
             Assert.IsNotNull(e);
+        }
+
+        [TestMethod]
+        public void NumberAvailableTest()
+        {
+           //IntPropertyTest(() => e.NumberAvailable, x => e.NumberAvailable = x);
         }
         
     }
