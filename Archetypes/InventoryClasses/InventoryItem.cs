@@ -60,10 +60,12 @@ namespace Open.Archetypes.InventoryClasses
             set { SetValue(ref productTypeId, value); }
         }
 
+        
+
         public enum ItemCategory
         {
-            //TODO: sozdat
-        }
+            Tehnika, Kodumasinad,Arvutid
+        };
 
         public ProductType GetProductType()
         {
