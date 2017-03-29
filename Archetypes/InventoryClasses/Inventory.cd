@@ -18,7 +18,7 @@
   <Class Name="Open.Archetypes.InventoryClasses.InventoryItem">
     <Position X="4.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAABABwCgIAAAoSAAAAAAAAAAAAGAQEADgAAAAAA=</HashCode>
+      <HashCode>AAAEAAAIBwCgAAAAoQAAAAAAAAAABAGAQAALgAAACAA=</HashCode>
       <FileName>InventoryClasses\InventoryItem.cs</FileName>
     </TypeIdentifier>
   </Class>

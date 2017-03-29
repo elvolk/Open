@@ -5,8 +5,6 @@ namespace Open.Archetypes.InventoryClasses
     {
         //TODO: find inventory entry; get all inventory entries
         //TODO: remove inventory entry
-        //TODO: add inventory entry 
-
-
+        //TODO: add inventory entry
     }
 }

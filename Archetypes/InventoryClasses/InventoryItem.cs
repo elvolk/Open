@@ -1,4 +1,5 @@
 ﻿using System;
+using Open.Aids;
 
 namespace Open.Archetypes.InventoryClasses
 {
@@ -8,8 +9,7 @@ namespace Open.Archetypes.InventoryClasses
         private string itemName;
         private int quantity;
         private int itemId;
-        private ItemCategory itemcategory;
-        private int inventoryId;
+        private ItemCategory category;
         private string description;
         private double inventoryStatus;
         private DateTime productValidUntil;
@@ -31,15 +31,10 @@ namespace Open.Archetypes.InventoryClasses
             get { return SetDefault(ref itemId); }
             set { SetValue(ref itemId, value); }
         }
-        public ItemCategory itemCategory
+        public ItemCategory Category
         {
-            get { return SetDefault(ref itemcategory); }
-            set { SetValue(ref itemcategory, value); }
-        }
-
-        public int InventoryId {
-            get { return SetDefault(ref inventoryId); }
-            set { SetValue(ref inventoryId, value); }
+            get { return SetDefault(ref category); }
+            set { SetValue(ref category, value); }
         }
         public string Description
         {
@@ -60,9 +55,20 @@ namespace Open.Archetypes.InventoryClasses
             set { SetValue(ref productTypeId, value); }
         }
 
-        public enum ItemCategory
+        public static InventoryItem Random()
         {
-            //TODO: sozdat
+            var x = new InventoryItem();
+            x.SetRandomValues();
+            return x;
+        }
+
+        protected override void SetRandomValues()
+        {
+            base.SetRandomValues();
+            itemName = GetRandom.String(5, 7);
+            itemId = GetRandom.Int32(4, 8);
+            quantity = GetRandom.Int32(1, 1000);
+            description = GetRandom.String(1); 
         }
 
         public ProductType GetProductType()
