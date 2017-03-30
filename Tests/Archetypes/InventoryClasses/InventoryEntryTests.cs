@@ -4,7 +4,7 @@ using Open.Archetypes.InventoryClasses;
 
 namespace Open.Tests.Archetypes.InventoryClasses
 {
-    [TestClass] public partial class InventoryEntryTests : ClassTests<Inventory>
+    [TestClass] public partial class InventoryEntryTests : ClassTests<InventoryEntry>
     {
         private InventoryEntry e;
         [TestMethod] public void ConstructorTest()

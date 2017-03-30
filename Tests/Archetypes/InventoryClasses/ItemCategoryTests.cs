@@ -5,11 +5,7 @@ using Open.Archetypes.InventoryClasses;
 
 namespace Open.Tests.Archetypes.InventoryClasses
 {
-    /// <summary>
-    /// Summary description for ItemCategoryTests
-    /// </summary>
-    [TestClass]
-    public class ItemCategoryTests : ClassTests<ItemCategory>
+    [TestClass] public class ItemCategoryTests : ClassTests<ItemCategory>
     {
         
         [TestMethod]

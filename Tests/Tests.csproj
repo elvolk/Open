@@ -88,6 +88,7 @@
     <Compile Include="Archetypes\BaseClasses\BaseTypeTests.cs" />
     <Compile Include="Archetypes\ContactClasses\ContactTests.cs" />
     <Compile Include="Archetypes\InventoryClasses\InventoryEntryTests.cs" />
+    <Compile Include="Archetypes\InventoryClasses\InventoryItemTests.cs" />
     <Compile Include="Archetypes\InventoryClasses\InventoryStatusTests.cs" />
     <Compile Include="Archetypes\InventoryClasses\InventoryTests.cs" />
     <Compile Include="Archetypes\InventoryClasses\ItemCategoryTests.cs" />

@@ -1,5 +1,4 @@
-﻿
-using Open.Aids;
+﻿using Open.Aids;
 namespace Open.Archetypes.BaseClasses {
     public abstract class UniqueEntity : AttributedEntity {
         private string uniqueId;

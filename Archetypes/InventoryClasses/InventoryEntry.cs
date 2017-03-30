@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Open.Aids;
 using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
@@ -42,6 +43,19 @@ namespace Open.Archetypes.InventoryClasses
                     capacity = inventoryList.Capacity;
                 }
             }
+        }
+        public new static InventoryEntry Random()
+        {
+            var x = new InventoryEntry();
+            x.SetRandomValues();
+            return x;
+        }
+
+        protected override void SetRandomValues()
+        {
+            base.SetRandomValues();
+            numberAvailable = GetRandom.Int32(1, 1000);
+            numberReserved = GetRandom.Int32(1, 500);
         }
 
         public void AddProductInstance()
