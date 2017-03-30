@@ -4,17 +4,15 @@ using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
 {
-    public class InventoryEntry: Archetype
+    public class InventoryEntry: UniqueEntity
     {
         List<InventoryEntry> inventoryList = new List<InventoryEntry>();
+        private string productTypeId;
         private bool canAcceptRequest;
-        private int numberAvailable;
         private int numberReserved;
-        private ProductType productType;
         public int NumberAvailable
         {
-            get { return SetDefault(ref numberAvailable); }
-            set { SetValue(ref numberAvailable, value); }
+            get { return ProductInstances.GetInstances(ProductTypeId); }
         }
         public int NumberReserved
         {
@@ -28,11 +26,13 @@ namespace Open.Archetypes.InventoryClasses
             set { SetValue(ref canAcceptRequest, value); }
         }
 
-        public ProductType ProductType
+        public string ProductTypeId
         {
-            get { return SetDefault(ref productType); }
-            set { SetValue(ref productType, value); }
+            get { return SetDefault(ref productTypeId); }
+            set { SetValue(ref productTypeId, value); }
         }
+        public ProductType ProductType => ProductTypes.GetById(ProductTypeId);
+
         public void Capacity()
         {
             var capacity = inventoryList.Capacity;
@@ -44,7 +44,7 @@ namespace Open.Archetypes.InventoryClasses
                 }
             }
         }
-        public new static InventoryEntry Random()
+        public static InventoryEntry Random()
         {
             var x = new InventoryEntry();
             x.SetRandomValues();
@@ -54,13 +54,12 @@ namespace Open.Archetypes.InventoryClasses
         protected override void SetRandomValues()
         {
             base.SetRandomValues();
-            numberAvailable = GetRandom.Int32(1, 1000);
             numberReserved = GetRandom.Int32(1, 500);
         }
 
         public void AddProductInstance()
         {
-            
+             
         }
 
         public void RemoveProductInstance()

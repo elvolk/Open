@@ -3,20 +3,15 @@ using System.Collections.Generic;
 
 namespace Open.Archetypes.InventoryClasses
 {
-    public class Product
+    public class InventoryList
     {
-        public Product(string ItemName, int quantity, int ItemId, 
+        public InventoryList(string ItemName, int quantity, int ItemId, 
             string ItemCategory, int InventoryId, string Description, 
             double InventoryStatus, DateTime ProductValidUntil)
         {
-            List<Product> ProductList = new List<Product>();
+            List<InventoryList> ProductList = new List<InventoryList>();
             var result = ProductList.Find(Product => ItemName == "ItemName");
-
-            if (ProductList != null)
-            {
-                ProductList.Add(new Product("ItemName", 10, 1265, "TOOTED1", 667, "Hea toode", 1, new DateTime(2017, 03, 03)));
-            }
-
+            
             var capacity = ProductList.Capacity;
             for (var i = 0; i < 10000; i++)
             {

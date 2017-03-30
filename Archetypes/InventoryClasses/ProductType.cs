@@ -4,9 +4,8 @@ using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
 {
-   public class ProductType : Archetype
+   public class ProductType : BaseType<ProductType>
     {
-        public static ProductType Instance { get; } = new ProductType();
         private string name;
         private string description;
 
@@ -22,9 +21,11 @@ namespace Open.Archetypes.InventoryClasses
             set { SetValue(ref description, value); }
         }
 
-        internal static ProductType GetProductType(string productTypeId)
+        public ProductTypes Inherited(string productTypeId)
         {
-            throw new NotImplementedException();
+            return ProductTypes.GetInherited(UniqueId);
         }
+
+        public override ProductType Type => ProductTypes.GetById(UniqueId);
     }
 }

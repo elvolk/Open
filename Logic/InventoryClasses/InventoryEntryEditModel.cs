@@ -1,6 +1,7 @@
 ﻿using System;
+using Open.Archetypes.InventoryClasses;
 
-namespace Open.Archetypes.InventoryClasses
+namespace Open.Logic.InventoryClasses
 {
     public class InventoryEntryEditModel : InventoryEntry
     {

@@ -70,10 +70,5 @@ namespace Open.Archetypes.InventoryClasses
             quantity = GetRandom.Int32(1, 1000);
             description = GetRandom.String(1); 
         }
-
-        public ProductType GetProductType()
-        {
-            return ProductType.GetProductType(ProductTypeId);
-        }
     }
 }
