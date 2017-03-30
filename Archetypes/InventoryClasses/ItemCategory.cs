@@ -1,5 +1,4 @@
-﻿
-namespace Open.Archetypes.InventoryClasses
+﻿namespace Open.Archetypes.InventoryClasses
 {
     public enum ItemCategory
     {

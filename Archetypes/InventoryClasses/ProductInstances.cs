@@ -1,5 +1,4 @@
-﻿using System;
-namespace Open.Archetypes.InventoryClasses
+﻿namespace Open.Archetypes.InventoryClasses
 {
     public class ProductInstances
     {
