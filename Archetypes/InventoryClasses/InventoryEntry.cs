@@ -1,18 +1,16 @@
-﻿using System.Collections.Generic;
-using Open.Aids;
+﻿using Open.Aids;
 using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
 {
     public class InventoryEntry: UniqueEntity
     {
-        List<InventoryEntry> inventoryList = new List<InventoryEntry>();
         private string productTypeId;
         private bool canAcceptRequest;
         private int numberReserved;
         public int NumberAvailable
         {
-            get { return ProductInstances.GetInstances(ProductTypeId); }
+            get { return ProductInstances.GetInstancesCount(ProductTypeId); }
         }
         public int NumberReserved
         {
@@ -33,17 +31,7 @@ namespace Open.Archetypes.InventoryClasses
         }
         public ProductType ProductType => ProductTypes.GetById(ProductTypeId);
 
-        public void Capacity()
-        {
-            var capacity = inventoryList.Capacity;
-            for (var i = 0; i < 10000; i++)
-            {
-                if (inventoryList.Capacity > capacity)
-                {
-                    capacity = inventoryList.Capacity;
-                }
-            }
-        }
+        
         public static InventoryEntry Random()
         {
             var x = new InventoryEntry();
@@ -57,14 +45,26 @@ namespace Open.Archetypes.InventoryClasses
             numberReserved = GetRandom.Int32(1, 500);
         }
 
-        public void AddProductInstance()
+        public void AddProductInstance(ProductInstance productInstance)
         {
-             
+             ProductInstances.Instance.Add(productInstance);
         }
 
-        public void RemoveProductInstance()
+        public void RemoveProductInstance(ProductInstance productInstance)
         {
-            
+            ProductInstances.Instance.Remove(productInstance);
         }
+        
+        //public void Capacity()
+        //{
+        //    var capacity = inventoryList.Capacity;
+        //    for (var i = 0; i < 10000; i++)
+        //    {
+        //        if (inventoryList.Capacity > capacity)
+        //        {
+        //            capacity = inventoryList.Capacity;
+        //        }
+        //    }
+        //}
     } 
 }

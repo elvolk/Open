@@ -1,6 +1,11 @@
-﻿namespace Open.Archetypes.InventoryClasses
+﻿
+using Open.Archetypes.BaseClasses;
+
+namespace Open.Archetypes.InventoryClasses
 {
-    public class InventoryEntries
+    public class InventoryEntries: Archetypes<InventoryEntry>
     {
+        public static InventoryEntries Instance { get; } = new InventoryEntries();
+        //random
     }
 }

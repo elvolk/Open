@@ -14,9 +14,9 @@ namespace Open.Archetypes.InventoryClasses
             return a;
         }
 
-        //public static InventoryEntry Find(string uniqueId)
-        //{
-        //    return Instance.Find(x => x.IsThisUniqueId(uniqueId));
-        //}
+        public static InventoryEntry Find(string uniqueId)
+        {
+            return Instance.Find(x => x.IsThisUniqueId(uniqueId));
+        }
     }
 }
