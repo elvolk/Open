@@ -1,5 +1,6 @@
 ﻿using System;
 using Open.Aids;
+using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
 {
@@ -14,6 +15,9 @@ namespace Open.Archetypes.InventoryClasses
         private double inventoryStatus;
         private DateTime productValidUntil;
         private string productTypeId;
+
+        public virtual Entity Item => Entities.Find(ItemName);
+
         public string ItemName
         {
             get { return SetDefault(ref itemName); }

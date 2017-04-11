@@ -1,4 +1,5 @@
-﻿using Open.Archetypes.BaseClasses;
+﻿using Open.Aids;
+using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
 {
@@ -16,6 +17,13 @@ namespace Open.Archetypes.InventoryClasses
             var l = Instance.FindAll(x => x.TypeId == uniqueId);
             t.AddRange(l);
             return t;
+        }
+        public static ProductTypes Random()
+        {
+            var r = new ProductTypes();
+            var c = GetRandom.Count();
+            for (var i = 0; i < c; i++) r.Add(ProductType.Random());
+            return r;
         }
     }
 }

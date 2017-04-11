@@ -19,10 +19,10 @@ namespace Open.Logic.InventoryClasses
             ValidFrom = v.Valid.From;
             ValidTo = v.Valid.To;
         }
-        public string NumberAvailable { get; set; }
-        public string NumberReserved { get; set; }
-        public string CanAcceptReservationRequest { get; set; }
-        public string ProductType { get; set; }
+        public new string NumberAvailable { get; set; }
+        public new string NumberReserved { get; set; }
+        public new string CanAcceptReservationRequest { get; set; }
+        public new string ProductType { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
     }

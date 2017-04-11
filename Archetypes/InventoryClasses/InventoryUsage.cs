@@ -24,6 +24,6 @@ namespace Open.Archetypes.InventoryClasses
         public string NumberAvailable { get; internal set; }
         public string NumberReserved { get; internal set; }
         public string ProductType { get; internal set; }
-        public object Valid { get; internal set; }
+        public new object Valid { get; internal set; }
     }
 }

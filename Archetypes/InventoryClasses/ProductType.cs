@@ -4,8 +4,16 @@ namespace Open.Archetypes.InventoryClasses
 {
    public class ProductType : BaseType<ProductType>
     {
+        public static ProductType Instance { get; } = new ProductType();
         private string name;
         private string description;
+
+        public static ProductType Random()
+        {
+            var t = new ProductType();
+            t.SetRandomValues();
+            return t;
+        }
 
         public string Name
         {

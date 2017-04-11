@@ -4,8 +4,12 @@ using Open.Archetypes.InventoryClasses;
 namespace Open.Tests.Archetypes.InventoryClasses
 {
     [TestClass]
-    public class InventoryTests : ClassTests<Inventory>
+    public class InventoryTests : CommonTests<Inventory>
     {
+        protected override Inventory GetRandomObj()
+        {
+            return Inventory.Random();
+        }
         [TestMethod]
         public void ConstructorTest()
         {

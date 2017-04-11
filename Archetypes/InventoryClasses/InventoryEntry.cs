@@ -30,7 +30,6 @@ namespace Open.Archetypes.InventoryClasses
             set { SetValue(ref productTypeId, value); }
         }
         public ProductType ProductType => ProductTypes.GetById(ProductTypeId);
-
         
         public static InventoryEntry Random()
         {

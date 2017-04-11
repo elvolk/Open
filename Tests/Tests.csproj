@@ -92,6 +92,7 @@
     <Compile Include="Archetypes\InventoryClasses\InventoryStatusTests.cs" />
     <Compile Include="Archetypes\InventoryClasses\InventoryTests.cs" />
     <Compile Include="Archetypes\InventoryClasses\ItemCategoryTests.cs" />
+    <Compile Include="Archetypes\InventoryClasses\ProductTypeTests.cs" />
     <Compile Include="Archetypes\MoneyClasses\MoneyTests.cs" />
     <Compile Include="Archetypes\OrderClasses\OrderTests.cs" />
     <Compile Include="Archetypes\PartyClasses\PartyTests.cs" />

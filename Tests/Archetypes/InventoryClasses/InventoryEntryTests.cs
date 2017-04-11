@@ -33,7 +33,7 @@ namespace Open.Tests.Archetypes.InventoryClasses
         }
 
         [TestMethod]
-        public void NumberAvailableTest()
+        public void NumberReservedTest()
         {
             TestProperty(() => Obj.NumberReserved, x => Obj.NumberReserved = x);
         }
@@ -41,12 +41,20 @@ namespace Open.Tests.Archetypes.InventoryClasses
         [TestMethod]
         public void AddProductInstanceTest()
         {
-            var a = ProductInstance.Random();
-            var c = ProductInstances.Instance.Count;
+            var a = ProductInstance.Random(); // productinstance
+            var c = ProductInstances.Instance.Count; // counter
             Obj.AddProductInstance(a);
             Assert.AreEqual(c+1, ProductInstances.Instance.Count); 
             Assert.AreEqual(a, ProductInstances.Instance.Find(x => x.UniqueId == a.UniqueId));
         }
-        
+
+        [TestMethod]
+        public void RemoveProductInstanceTest()
+        {
+            var a = ProductInstance.Random();
+            var c = ProductInstances.Instance.Count;
+            Obj.RemoveProductInstance(a);
+            Assert.AreEqual(c, ProductInstances.Instance.Count);
+        }
     }
 }

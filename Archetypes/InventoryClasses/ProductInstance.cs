@@ -1,7 +1,4 @@
-﻿using System;
-using Open.Aids;
-using Open.Archetypes.BaseClasses;
-using Open.Archetypes.RoleClasses;
+﻿using Open.Archetypes.BaseClasses;
 
 namespace Open.Archetypes.InventoryClasses
 {
